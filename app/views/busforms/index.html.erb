@@ -133,7 +133,18 @@ function GetRoute() {
 </script>
 
 
+<%= search_form_for @search do |f| %>
+<div class="container">  
+<div class="col-md-4">
+<div class="field">
+  <%= f.label :title_cont, "Search By Bus Number" %>
+  <%= f.text_field :title_cont %>
+</div>
 
+<div class="actions"><%= f.submit "Search" %> </div>
+</div>
+</div>
+<% end %>
 
 <% @busforms.each do |busform| %>
 

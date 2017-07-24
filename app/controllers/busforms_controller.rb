@@ -4,8 +4,7 @@
   # GET /busforms
   # GET /busforms.json
   def index
-    @search = Busform.search(params[:q])
-    @busforms = @search.result
+    @busforms = Busform.all
   #store all the clients that match the name searched    
   end
   
